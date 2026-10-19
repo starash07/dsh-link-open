@@ -1,0 +1,42 @@
+{
+  "name": "dsh-link-open",
+  "version": "1.0.0",
+  "description": "Right-click a link to open it in the system default browser (DeepSeek Harness desktop client)",
+  "license": "MIT",
+  "author": "starash07",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/starash07/dsh-link-open.git"
+  },
+  "homepage": "https://github.com/starash07/dsh-link-open#readme",
+  "bugs": {
+    "url": "https://github.com/starash07/dsh-link-open/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "link",
+    "browser"
+  ],
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  }
+}
